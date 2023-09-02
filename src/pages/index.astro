@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo.astro";
+---
+
+<Layout title="Home">
+  <header>
+    <div class="wrapper">
+      <div class="flex items-center">
+        <Logo />
+
+        <nav class="ml-auto">
+          <ul class="flex items-center gap" style="--gap-size: 2rem">
+            <li>About</li>
+            <li>Careers</li>
+            <li>Events</li>
+            <li>Products</li>
+            <li>Support</li>
+          </ul>
+        </nav>
+      </div>
+      <p>IMMERSIVE EXPERIENCES THAT DELIVER</p>
+    </div>
+  </header>
+  <!-- <main>hello</main> -->
+</Layout>
+
+<style>
+  li {
+    font-size: var(--size-2);
+  }
+</style>
