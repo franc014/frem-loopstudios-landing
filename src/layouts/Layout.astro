@@ -114,17 +114,50 @@ const { title } = Astro.props;
   .flex {
     display: flex;
   }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .full-width {
+    width: 100%;
+  }
   .items-center {
     align-items: center;
   }
+
   .ml-auto {
     margin-left: auto;
+  }
+  .p-top {
+    --p-top: var(--size-3);
+    padding-block: var(--p-top);
+  }
+  .p-block {
+    --p-block: var(--size-6);
+    padding-block: var(--p-block);
+  }
+  .m-block {
+     --m-block: var(--size-6);
+    margin-block: var(--m-block);
   }
   .gap {
     --gap-size: var(--size-3);
     gap: var(--gap-size);
   }
+  .relative {
+    position: relative;
+  }
+
+  .text-sm {
+    font-size: var(--size-3);
+  }
   ul {
     list-style-type: none;
+    padding: 0;
   }
 </style>

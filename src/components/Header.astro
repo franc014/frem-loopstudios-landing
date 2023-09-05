@@ -1,0 +1,15 @@
+---
+import NavBar from "./svelte/NavBar.svelte";
+import Logo from "./Logo.astro";
+
+---
+
+<header>
+  <div class="wrapper">
+    <div class="flex flex-wrap items-center justify-between">
+     <Logo />
+     <NavBar client:only="svelte"/>
+    </div>
+    <p>IMMERSIVE EXPERIENCES THAT DELIVER</p>
+  </div>
+</header>

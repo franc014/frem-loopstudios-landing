@@ -10,9 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/svelte": "^4.0.0",
     "astro": "^3.0.6",
     "open-props": "^1.5.15",
-    "postcss-jit-props": "^1.0.13"
+    "postcss-jit-props": "^1.0.13",
+    "svelte": "^4.2.0"
   },
   "devDependencies": {
     "prettier": "^3.0.3",
