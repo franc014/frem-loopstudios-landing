@@ -1,15 +1,69 @@
 ---
 import NavBar from "./svelte/NavBar.svelte";
 import Logo from "./Logo.astro";
-
 ---
 
 <header>
-  <div class="wrapper">
-    <div class="flex flex-wrap items-center justify-between">
+  <div class="wrapper top-header flex flex-wrap items-center justify-between">
      <Logo />
      <NavBar client:only="svelte"/>
+  </div>
+  <div class="wrapper" >
+    <div class="hero flex items-center justify-center p-block" style="--p-block: var(--size-12);">
+      <p class="max-width-full" >
+        IMMERSIVE EXPERIENCES THAT <br />
+        DELIVER
+      </p>
     </div>
-    <p>IMMERSIVE EXPERIENCES THAT DELIVER</p>
   </div>
 </header>
+
+<style>
+  header {
+    background-image: url(/images/image-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  @media screen and (min-width: 850px) {
+    header {
+      background-image: url(/images/image-hero-desktop.jpg);
+      background-size: cover;
+    }
+    .top-header {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .hero {
+    container-type: inline-size;
+  }
+
+  .hero > p {
+    color: white;
+    font-size: 12cqi;
+   /*  width: fit-content; */
+    border: 1px solid white;
+    line-height: var(--font-lineheight-0);
+    padding: 2rem 2rem 1.2rem 2rem;
+  }
+
+   @media screen and (min-width: 850px) {
+    .top-header {
+      padding-top: var(--size-8);
+    }
+    .hero {
+      justify-content: flex-start;
+    }
+    .hero p{
+      font-size: var(--size-fluid-5);
+      max-width: 60%;
+    }
+    .hero p br{
+      display: none;
+    }
+
+  }
+
+</style>
