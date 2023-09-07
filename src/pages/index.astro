@@ -1,8 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Product from "../components/Product.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Home">
   <Header />
+  <main>
+    <section class="p-bottom" style="--p-bottom: var(--size-9)">
+      <div class="wrapper">
+        <div>
+          <img src="/images/image-interactive.jpg" alt="A client using our VR product">
+          <div class="p-block">
+            <h2 class="fs-lg text-center p-bottom">The leader in interactive VR</h2>
+            <p class="text-center text-gray-dark font-secondary">
+              Founded in 2011, Loopstudios has been producing world-class 
+              virtual reality projects for some of the best companies around the globe.
+              Our award-winning creations have transformed businesses through digital 
+              experiences that bind to their brand 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-bottom" style="--p-bottom: var(--size-9)">
+      <div class="wrapper">
+        <div class="flex flex-col items-center">
+           <h2 class="fs-lg text-center p-bottom">Our creations</h2>
+           <div class="grid-auto-fit gap m-bottom">
+              <Product product={{
+                img: '/images/image-deep-earth.jpg',
+                title: 'Deep earth'
+              }}/>
+              <Product product={{
+                img: '/images/image-deep-earth.jpg',
+                title: 'Deep earth'
+              }}/>
+           </div>
+          <button class="btn">SEE ALL</button>
+        </div>
+       
+      </div>
+    </section>
+  </main>
+
+  <Footer />
 </Layout>

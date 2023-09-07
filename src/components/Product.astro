@@ -1,0 +1,26 @@
+---
+const {product} = Astro.props;
+---
+<div class="product-card">
+    <img src={product.img} alt={`Image of ${product.title}`} />
+    <h3 class="fs-sm">{product.title}</h3>
+</div>
+
+
+<style>
+    .product-card {
+        position: relative;
+    }
+    .product-card h3 {
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        color: white;
+        height: min-content;
+        width: min-content;
+        
+    }
+
+
+</style>

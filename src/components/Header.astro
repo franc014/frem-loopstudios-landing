@@ -3,7 +3,7 @@ import NavBar from "./svelte/NavBar.svelte";
 import Logo from "./Logo.astro";
 ---
 
-<header>
+<header class="m-bottom" style="--m-bottom: var(--size-11)">
   <div class="wrapper top-header flex flex-wrap items-center justify-between">
      <Logo />
      <NavBar client:only="svelte"/>

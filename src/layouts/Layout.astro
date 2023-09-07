@@ -47,6 +47,18 @@ const { title } = Astro.props;
     font-family: var(--ff-primary);
   }
 
+  body {
+    background: hsl(var(--crl-white));
+    color: hsl(var(--crl-black));
+  }
+
+  :is(h1,h2,h3) {
+    color: hsl(var(--crl-black));
+    text-transform: uppercase;
+  }
+
+  
+
   .wrapper {
     width: 85%;
     max-width: 85%;
@@ -57,6 +69,43 @@ const { title } = Astro.props;
     .wrapper {
        width: 80%;
     }
+  }
+
+  /* Colors */
+  .bg-primary {
+    background-color: hsl(var(--crl-black));
+  }
+  .text-white {
+    color: hsl(var(--crl-white));
+  }
+
+  /* Text */
+  .text-center {
+    text-align: center;
+  }
+
+  .fs-lg {
+    font-size: var(--size-7);
+  }
+
+  .fs-sm {
+    font-size: var(--size-5);
+  }
+
+  .text-gray-dark {
+    color: hsl(var(--crl-dark-gray));
+  }
+
+  .text-gray-darker {
+    color: hsl(var(--crl-darker-gray));
+  }
+
+  .font-primary {
+    font-family: var(--ff-primary);
+  }
+
+  .font-secondary {
+    font-family: var(--ff-secondary);
   }
 
   .flex {
@@ -91,6 +140,11 @@ const { title } = Astro.props;
     --p-top: var(--size-3);
     padding-block: var(--p-top);
   }
+
+  .p-bottom {
+    --p-bottom: var(--size-3);
+    padding-bottom: var(--p-bottom);
+  }
   .pad {
     --pad: var(--size-2);
     padding: var(--pad);
@@ -103,6 +157,11 @@ const { title } = Astro.props;
      --m-block: var(--size-6);
     margin-block: var(--m-block);
   }
+
+  .m-bottom {
+     --m-bottom: var(--size-6);
+    margin-bottom: var(--m-bottom);
+  }
   .gap {
     --gap-size: var(--size-3);
     gap: var(--gap-size);
@@ -113,6 +172,26 @@ const { title } = Astro.props;
 
   .text-sm {
     font-size: var(--size-3);
+  }
+  
+  /* Grids */
+
+  .grid-auto-fit {
+    --min-width-column: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(var(--min-width-column),1fr));
+  }
+  
+  /* Buttons */
+  button {
+    background: 0;
+    padding: .5rem 1rem .3rem;
+    border: 1px solid hsl(var(--crl-darker-gray));
+    display: flex;
+    letter-spacing: .2rem;
+    color: hsl(var(--crl-black));
+    font-weight: bold;
+    
   }
 
   /** APP ICONS **/

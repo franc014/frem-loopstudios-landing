@@ -1,0 +1,24 @@
+---
+import Logo from "./Logo.astro";
+import Menu from "./Menu.astro";
+import Social from "./Social.astro";
+---
+
+<footer class="p-block bg-primary text-white">
+    <div class="wrapper">
+        <div class="grid-auto-fit gap" style="--min-width-column=400px">
+            <div class="flex flex-col items-center">
+                <Logo />
+                <Menu />
+            </div>
+            <div>
+                <Social />
+                <p class="text-center p-bottom text-gray-dark">
+                    &copy; 2023 Loopstudios. All rights reserved
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+

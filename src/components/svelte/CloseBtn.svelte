@@ -4,7 +4,6 @@
   function toggleNav() {
     dispatch("toggleNav");
   }
-
   export let navIsOpen;
 </script>
 
