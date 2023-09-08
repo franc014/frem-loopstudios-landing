@@ -5,3 +5,30 @@
     <li><a href="#"><img src="/images/icon-instagram.svg" alt="Instagram icon"></a></li>
 </ul>
 
+<style>
+     @media screen and (min-width: 850px) {
+        ul {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        ul li {
+            padding: 0;
+        }
+
+        ul li a {
+            color: hsl(var(--crl-white));
+            text-decoration: underline;
+        }
+
+        ul li a img {
+            padding-bottom: 10px;
+        }
+
+        ul li a img:hover {
+            border-bottom: 1px solid white
+        }
+    }
+</style>
+

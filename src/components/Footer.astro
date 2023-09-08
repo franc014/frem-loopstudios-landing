@@ -1,17 +1,17 @@
 ---
 import Logo from "./Logo.astro";
-import Menu from "./Menu.astro";
+import Menu from "./svelte/Menu.svelte";
 import Social from "./Social.astro";
 ---
 
 <footer class="p-block bg-primary text-white">
     <div class="wrapper">
-        <div class="grid-auto-fit gap" style="--min-width-column=400px">
-            <div class="flex flex-col items-center">
+        <div class="grid-auto-fit gap content-center" style="--min-width-column=400px">
+            <div class="flex flex-col items-center loop-info">
                 <Logo />
                 <Menu />
             </div>
-            <div>
+            <div class="loop-social">
                 <Social />
                 <p class="text-center p-bottom text-gray-dark">
                     &copy; 2023 Loopstudios. All rights reserved
@@ -21,4 +21,16 @@ import Social from "./Social.astro";
     </div>
 
 </footer>
+
+<style>
+    @media screen and (min-width: 850px) {
+        .loop-info {
+            align-items: flex-start;
+        }
+        .loop-social p{
+            text-align: right;
+        }    
+    }
+    
+</style>
 
