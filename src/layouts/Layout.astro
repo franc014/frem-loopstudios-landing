@@ -57,11 +57,9 @@ const { title } = Astro.props;
     text-transform: uppercase;
   }
 
-  
-
   .wrapper {
     width: 85%;
-    max-width: 85%;
+    max-width: 1269px;
     margin-inline: auto;
   }
 
@@ -182,6 +180,10 @@ const { title } = Astro.props;
     grid-template-columns: repeat(auto-fit,minmax(var(--min-width-column),1fr));
   }
   
+  .content-center {
+    place-content: center;
+  }
+
   /* Buttons */
   button {
     background: 0;
@@ -191,7 +193,11 @@ const { title } = Astro.props;
     letter-spacing: .2rem;
     color: hsl(var(--crl-black));
     font-weight: bold;
-    
+  }
+
+  button:hover {
+    background-color: hsl(var(--crl-black));
+    color: hsl(var(--crl-white))
   }
 
   /** APP ICONS **/
@@ -201,10 +207,10 @@ const { title } = Astro.props;
     height: var(--size-7);
   }
 
- 
-
   ul {
     list-style-type: none;
     padding: 0;
   }
+
+  
 </style>

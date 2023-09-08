@@ -8,11 +8,11 @@ import Footer from "../components/Footer.astro";
 <Layout title="Home">
   <Header />
   <main>
-    <section class="p-bottom" style="--p-bottom: var(--size-9)">
+    <section class="p-bottom presentation-section" style="--p-bottom: var(--size-9)">
       <div class="wrapper">
-        <div>
+        <div class="presentation">
           <img src="/images/image-interactive.jpg" alt="A client using our VR product">
-          <div class="p-block">
+          <div class="p-block flex flex-col items-center">
             <h2 class="fs-lg text-center p-bottom">The leader in interactive VR</h2>
             <p class="text-center text-gray-dark font-secondary">
               Founded in 2011, Loopstudios has been producing world-class 
@@ -24,10 +24,10 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
     </section>
-
+    
     <section class="p-bottom" style="--p-bottom: var(--size-9)">
       <div class="wrapper">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center creations">
            <h2 class="fs-lg text-center p-bottom">Our creations</h2>
            <div class="grid-auto-fit gap m-bottom">
               <Product product={{
@@ -39,12 +39,89 @@ import Footer from "../components/Footer.astro";
                 title: 'Deep earth'
               }}/>
            </div>
-          <button class="btn">SEE ALL</button>
+          
+           <button >SEE ALL</button>
+  
         </div>
-       
       </div>
     </section>
   </main>
 
   <Footer />
 </Layout>
+
+<style>
+
+  @media screen and (min-width: 850px) {
+
+    .presentation-section {
+      margin-bottom: var(--size-8);
+      
+    }
+
+  
+    .presentation {
+      position: relative;
+    
+    }
+
+    .presentation > img {
+       
+    }
+
+    .presentation > div {
+      position: absolute;
+      background: hsl(var(--crl-white));
+      inset: 28% 0 0 52%;
+      padding: 0 0 0 var(--size-10);
+      justify-content: flex-end;
+      max-width: 500px;
+    }
+
+    .presentation > div h2 {
+      text-align: left;
+    }
+
+    .presentation > div p {
+      text-align: left;
+    }
+
+    .creations {
+      display: grid;
+     
+      grid-template-areas: "hd hd btn"
+                           "products products products";
+      gap: 4rem;
+    }
+    
+    .creations h2 {
+      grid-area: hd;
+      display: flex;
+      text-align:left;
+      padding-bottom: 0;
+    }
+    .creations div {
+      grid-area: products;
+    }
+
+    .creations button {
+      grid-area: btn;
+      width: 50%;
+      display: flex;
+      max-width: max-content;
+      justify-self: end;
+    }
+    
+  }
+
+  @media screen and (min-width: 1250px) {
+    .presentation > div {
+      inset: 28% 0 0 42%;
+    }
+  }
+
+
+
+
+
+</style>
