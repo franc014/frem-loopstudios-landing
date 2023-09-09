@@ -2,8 +2,13 @@
 const {product} = Astro.props;
 ---
 <div class="product-card">
-    <img src={product.img} alt={`Image of ${product.title}`} />
-    <h3 class="fs-sm">{product.title}</h3>
+    <a href={`/${product.title}`}>
+        <picture>
+            <source media="(min-width: 850px)" srcset={product.img_desktop} >      
+            <img src={product.img} alt={`Image of ${product.title}`} />
+        </picture>
+    </a>
+    <h3 class="fs-sm">{product.title.toUpperCase()}</h3>
 </div>
 
 
@@ -19,8 +24,34 @@ const {product} = Astro.props;
         color: white;
         height: min-content;
         width: min-content;
-        
+    }
+    a {
+        display: block;
+    }
+    
+    img {
+        object-fit: cover;
+        width: 100%;
     }
 
-
+    picture {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+    }
+    picture::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0.5;
+        background: linear-gradient(to bottom, hsl(330 10% 40%),hsl(350 30% 20%));
+    }
+    picture:hover::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0.5;
+        background: hsl(50 70% 70%);
+        cursor: pointer;
+    }
 </style>
