@@ -13,9 +13,11 @@ import Social from "./Social.astro";
             </div>
             <div class="loop-social">
                 <Social />
-                <p class="text-center p-bottom text-gray-dark">
-                    &copy; 2023 Loopstudios. All rights reserved
-                </p>
+                <div class="text">
+                    <p class="text-center p-bottom text-gray-dark">
+                        &copy; 2023 Loopstudios. All rights reserved
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -24,13 +26,25 @@ import Social from "./Social.astro";
 
 <style>
     @media screen and (min-width: 850px) {
+        .loop-social {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
         .loop-info {
             align-items: flex-start;
+           
         }
-        .loop-social p{
-            text-align: right;
+        .loop-social .text{
+           
+            padding: 0 0 0 0 ;
+           
+           
         }    
+
+        .loop-social .text p {
+            text-align: right;
+        }
     }
-    
 </style>
 
