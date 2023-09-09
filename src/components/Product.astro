@@ -8,7 +8,7 @@ const {product} = Astro.props;
             <img src={product.img} alt={`Image of ${product.title}`} />
         </picture>
     </a>
-    <h3 class="fs-sm">{product.title.toUpperCase()}</h3>
+    <h3 class="fs-sm">{product.title}</h3>
 </div>
 
 
@@ -43,8 +43,12 @@ const {product} = Astro.props;
         content: '';
         position: absolute;
         inset: 0;
-        opacity: 0.5;
-        background: linear-gradient(to bottom, hsl(330 10% 40%),hsl(350 30% 20%));
+        opacity: 0.4;
+        background:  linear-gradient(
+      to bottom in hsl, 
+      hsl(201 7% 77%) -7% -7%, hsl(217 2% 15%) 86% 86%
+    )
+  ;
     }
     picture:hover::before {
         content: '';

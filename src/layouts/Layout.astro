@@ -32,6 +32,7 @@ const { title } = Astro.props;
     --crl-black: 0 0% 0%;
     --crl-dark-gray: 0 0% 55%;
     --crl-darker-gray: 0 0% 41%;
+    --crl-pink: 295 54% 64%;
     
     /* Typography */
     --fs-base: 15px;
@@ -64,8 +65,8 @@ const { title } = Astro.props;
   }
 
   ::selection {
-    background-color: #CB71D4;
-    color: white;
+    background-color: var(--crl-pink);
+    color: var(--crl-white);;
   }
 
   @media screen and (min-width: 850px) {
