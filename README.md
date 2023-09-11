@@ -1,47 +1,54 @@
-# Astro Starter Kit: Minimal
+# Frontend Mentor - Loopstudios landing page solution
 
-```
-npm create astro@latest -- --template minimal
-```
+This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Table of contents
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-## 🚀 Project Structure
+## Overview
 
-Inside of your Astro project, you'll see the following folders and files:
+### The challenge
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Users should be able to:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Links
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Solution URL: [GitHub](https://github.com/franc014/frem-loopstudios-landing)
+- Live Site URL: 
 
-## 🧞 Commands
+## My process
 
-All commands are run from the root of the project, from a terminal:
+### Built with
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- HTML5 markup
+- CSS custom properties and Open Props integration using JIT package
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- Astro
+- Svelte for Mobile Main Menu
+- CUBE methodology for CSS implementation
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### What I learned
+
+There are interesting use cases to apply different HTML/CSS techniques in this challenge.
+One of those is the use of the <picture> element with <source> ones, in order to specify different images for mobile and desktop versions for the gallery section. Responsive, art-directed images implementation is much easier with those elements. 
+
+
+## Author
+
+- Website - [Francisco Andrade](https://www.jandrade.co)
+- Frontend Mentor - [@franc014](https://www.frontendmentor.io/profile/franc014)
+- Github - [franc014](https://github.com/franc014)
+
