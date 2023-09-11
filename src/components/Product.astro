@@ -1,0 +1,61 @@
+---
+const {product} = Astro.props;
+---
+<div class="product-card">
+    <a href={`/${product.title}`}>
+        <picture>
+            <source media="(min-width: 850px)" srcset={product.img_desktop} >      
+            <img src={product.img} alt={`Image of ${product.title}`} />
+        </picture>
+    </a>
+    <h3 class="fs-sm">{product.title}</h3>
+</div>
+
+
+<style>
+    .product-card {
+        position: relative;
+    }
+    .product-card h3 {
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        color: white;
+        height: min-content;
+        width: min-content;
+    }
+    a {
+        display: block;
+    }
+    
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    picture {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+    }
+    picture::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0.4;
+        background:  linear-gradient(
+      to bottom in hsl, 
+      hsl(201 7% 77%) -7% -7%, hsl(217 2% 15%) 86% 86%
+    )
+  ;
+    }
+    picture:hover::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0.5;
+        background: hsl(50 70% 70%);
+        cursor: pointer;
+    }
+</style>
