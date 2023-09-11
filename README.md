@@ -24,7 +24,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/franc014/frem-loopstudios-landing)
-- Live Site URL: 
+- Live Site URL: https://loop-studios-landing-page-chi.vercel.app/
 
 ## My process
 

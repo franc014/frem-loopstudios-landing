@@ -3,13 +3,13 @@ import NavBar from "./svelte/NavBar.svelte";
 import Logo from "./Logo.astro";
 ---
 
-<header class="m-bottom" style="--m-bottom: var(--size-11)">
+<header class="m-bottom-lg" >
   <div class="wrapper top-header flex flex-wrap items-center justify-between">
      <Logo />
      <NavBar client:only="svelte"/>
   </div>
   <div class="wrapper" >
-    <div class="hero flex items-center justify-center p-block" style="--p-block: var(--size-12);">
+    <div class="hero flex items-center justify-center p-top-md p-bottom-lg" >
       <p class="max-width-full" >
         IMMERSIVE EXPERIENCES THAT <br />
         DELIVER

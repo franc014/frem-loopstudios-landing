@@ -145,10 +145,25 @@ const { title } = Astro.props;
     padding-block: var(--p-top);
   }
 
+  .p-top-md {
+    padding-block: var(--size-12);
+  }
+
   .p-bottom {
     --p-bottom: var(--size-3);
     padding-bottom: var(--p-bottom);
   }
+  
+  .p-bottom-md {
+    padding-bottom: var(--size-9);
+  }
+
+  .p-bottom-lg {
+    padding-bottom: var(--size-13);
+  }
+
+
+
   .pad {
     --pad: var(--size-2);
     padding: var(--pad);
@@ -157,6 +172,12 @@ const { title } = Astro.props;
     --p-block: var(--size-6);
     padding-block: var(--p-block);
   }
+
+  .p-block-lg {
+    padding-block: var(--size-13);
+  }
+
+
   .m-block {
      --m-block: var(--size-6);
     margin-block: var(--m-block);
@@ -166,9 +187,18 @@ const { title } = Astro.props;
      --m-bottom: var(--size-6);
     margin-bottom: var(--m-bottom);
   }
+
+  .m-bottom-lg {
+    margin-bottom: var(--size-11);
+  }
+
   .gap {
     --gap-size: var(--size-3);
     gap: var(--gap-size);
+  }
+
+  .gap-md {
+     gap: var(--size-6);
   }
   .relative {
     position: relative;
